@@ -149,9 +149,13 @@ public class MainActivity extends AppCompatActivity {
             String result = "Your score is "+score;
             if (score >= 15){
                 result = result+". \n Congratulations, this is fantastic";
+                Toast toast = Toast.makeText(context, "Score "+score+". Fantastic!", Toast.LENGTH_SHORT);
+                toast.show();
             }
             else {
                 result = result+". \n Practice more, practice makes perfect";
+                Toast toast = Toast.makeText(context, "Score "+score+". Practice more", Toast.LENGTH_SHORT);
+                toast.show();
             }
 
             question.setText(result);
