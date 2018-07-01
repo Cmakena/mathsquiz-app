@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         boolean rb4 = radio4.isChecked();
 
         // Questions 1,2,and 6 uses checkboxes, radio , radio respectively, so get the value of Edit text if not these numbers
-        if (qNumber!=1 & qNumber!=2 & qNumber!=6){
+        if (qNumber!=1 && qNumber!=2 && qNumber!=6){
             // Find the user answer, If null we assume no input and it defaults to 0
             if (answerValue.getText().toString().matches(""))
                 userAnswer = 0;
@@ -85,13 +85,13 @@ public class MainActivity extends AppCompatActivity {
         }
         // If it's question 1, we check if checkbox 1 and 3 are the only selected options
         if (qNumber ==1){
-            if (cb2 | cb4)
+            if (cb2 || cb4)
                 userAnswer = 0;
-            else if (cb1&cb3)
+            else if (cb1&&cb3)
                 userAnswer = 9;
         }
         // if it's question 2 or 6, the answer is 5 which is radio three
-        if (qNumber == 2 | qNumber==6){
+        if (qNumber == 2 || qNumber==6){
             if (rb3)
                 userAnswer = 5;
             else userAnswer = 0;
